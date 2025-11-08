@@ -1,0 +1,81 @@
+/* Naam Daan - Bhajan style redesign (white & gold theme) */
+:root{
+  --bg:#fff;
+  --card:#fff7f0;
+  --gold-dark:#b8860b;
+  --gold-light:#f6d365;
+  --text:#2b2b2b;
+  --muted:#6b6b6b;
+}
+
+*{box-sizing:border-box}
+body{margin:0;font-family: 'Merriweather', serif;background:linear-gradient(180deg,#fff,#fff7f2);color:var(--text);-webkit-font-smoothing:antialiased;line-height:1.5}
+
+.container{max-width:1000px;margin:0 auto;padding:20px}
+
+.site-header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,0.95);border-bottom:1px solid rgba(0,0,0,0.06);backdrop-filter:blur(4px)}
+.header-inner{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 0}
+
+.brand{display:flex;align-items:center;gap:12px}
+.logo-img{width:76px;height:76px;object-fit:contain;border-radius:8px;box-shadow:0 6px 20px rgba(0,0,0,0.08)}
+.logo-fallback{width:76px;height:76px}
+.brand-text h1{margin:0;font-size:1.25rem;color:var(--gold-dark);letter-spacing:1px}
+.brand-text .tagline{margin:0;font-size:0.9rem;color:var(--muted)}
+
+.top-nav a{color:var(--text);text-decoration:none;margin-left:12px;font-size:0.95rem}
+.top-nav .btn-join{background:linear-gradient(90deg,var(--gold-dark),var(--gold-light));color:#fff;padding:8px 12px;border-radius:999px;text-decoration:none;font-weight:700;box-shadow:0 6px 18px rgba(214,170,0,0.12)}
+
+.hero{padding:48px 0;background-image:radial-gradient(circle at 10% 10%, rgba(246,211,101,0.12), transparent 10%);border-bottom:1px solid rgba(0,0,0,0.03)}
+.hero-grid{display:grid;grid-template-columns:1fr 360px;gap:24px;align-items:center}
+.hero-text h2{font-size:2rem;margin:0;color:var(--gold-dark);font-weight:700}
+.lead{color:var(--muted);margin-top:12px;font-size:1rem}
+
+.cta-row{margin-top:18px;display:flex;gap:12px;flex-wrap:wrap}
+.btn{background:linear-gradient(90deg,var(--gold-dark),var(--gold-light));color:#fff;padding:10px 16px;border-radius:10px;text-decoration:none;font-weight:700;box-shadow:0 8px 26px rgba(214,170,0,0.12)}
+.btn-outline{border:1px solid rgba(0,0,0,0.06);padding:10px 16px;border-radius:10px;color:var(--text);text-decoration:none}
+
+.small-info{margin-top:12px;color:var(--muted);font-size:0.95rem}
+
+.card{background:linear-gradient(180deg,#ffffff,#fff9f3);border-radius:14px;padding:18px;color:var(--text);box-shadow:0 8px 30px rgba(0,0,0,0.06)}
+.hero-art .card{text-align:center}
+
+.section{padding:48px 0}
+.section h3{margin-top:0;color:var(--gold-dark);font-weight:700;font-size:1.5rem}
+.muted{color:var(--muted)}
+
+.about-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:16px}
+.card.small{padding:14px;border-radius:12px}
+
+.media-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:12px}
+.media-card .media-thumb{height:140px;background:linear-gradient(180deg, rgba(214,170,0,0.07), rgba(214,170,0,0.03));display:flex;align-items:center;justify-content:center;border-radius:8px;color:var(--gold-dark);font-weight:700}
+
+.wisdom-wrap{display:flex;gap:18px;align-items:center;flex-wrap:wrap;margin-top:12px}
+.wisdom-static blockquote{background:linear-gradient(90deg, rgba(246,211,101,0.08), transparent);padding:12px;border-radius:8px;color:var(--gold-dark);margin:0 0 8px 0;font-style:normal}
+.wisdom-animated{min-width:280px;padding:12px;border-radius:10px;background:linear-gradient(90deg, rgba(253,160,133,0.02), transparent);border:1px solid rgba(0,0,0,0.03)}
+
+#wquote, #quote{font-weight:600;color:var(--gold-dark);font-size:1.05rem}
+.controls{display:flex;gap:8px}
+.controls button{background:transparent;border:1px solid rgba(0,0,0,0.06);padding:6px 8px;border-radius:6px;color:var(--text)}
+
+.event-card .muted{color:var(--muted)}
+.event-actions{display:flex;gap:8px;margin-top:12px}
+.event-actions .btn{padding:8px 12px}
+
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.quote-box{padding:14px;border-radius:10px;background:linear-gradient(180deg,#fffaf4,#fff5ee)}
+
+.contact-form{display:grid;gap:8px;max-width:720px}
+.contact-form input,.contact-form textarea{background:#fff;border:1px solid rgba(0,0,0,0.06);padding:10px;border-radius:8px;color:var(--text);outline:none}
+.form-actions{display:flex;gap:12px;align-items:center}
+.form-msg{margin-top:8px;color:var(--gold-dark)}
+
+.site-footer{border-top:1px solid rgba(0,0,0,0.03);padding:18px 0;margin-top:24px;color:var(--muted)}
+.footer-inner{display:flex;justify-content:space-between;align-items:center;gap:12px;font-size:0.95rem}
+
+@media(max-width:900px){
+  .hero-grid{grid-template-columns:1fr; padding-bottom:12px}
+  .about-grid{grid-template-columns:1fr}
+  .media-grid{grid-template-columns:1fr}
+  .grid-2{grid-template-columns:1fr}
+  .top-nav{display:none}
+}
